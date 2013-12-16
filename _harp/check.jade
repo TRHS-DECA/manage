@@ -1,0 +1,8 @@
+#checkIn.page
+ h2 Check-In
+ form(method='POST', action='https://docs.google.com/forms/d/1wFGUtb8zNZzWorOxRDn875zsE9fDtHfScddX_9Mcxt0/formResponse', target='hidden_iframe', onsubmit='checkSub=true;')
+  input(type='text', placeholder='Manager', name='entry.259169961')
+  input(type='text', placeholder='Employee', name='entry.128268371')
+  input(type='text', placeholder='Employee', name='entry.919481212')
+  input(type='submit', value='Submit')
+iframe(name="hidden_iframe", id="hidden_iframe", style="display:none;", onload="if(checkSub){alert('Submitted!');}")

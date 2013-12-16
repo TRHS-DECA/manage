@@ -1,0 +1,26 @@
+// Created by Krish Dholakiya - http://krrishd.github.io
+// Contact at dholakiyaks@s.dcsdk12.org for inquiries
+doctype html
+html
+ head
+  title Manager Interface - The Ridge
+  link(href='main.css', rel='stylesheet', type='text/css')
+  link(rel="apple-touch-icon-precomposed", href="icon.png")
+  meta(name="apple-mobile-web-app-capable", content="yes")
+  meta(name="viewport", content="initial-scale=1.0, user-scalable=no")
+  script(src='bower_components/jquery/jquery.min.js')
+  script(src='bower_components/angular/angular.min.js')
+  script(src='bower_components/angular-route/angular-route.min.js')
+  script(src='main.js')
+ body(ng-app='manage', ng-controller='mainCtrl')
+  header
+   h1 Manager Interface - The Ridge
+   nav
+    a(href='#/transactions') Transactions
+    a(href='#/check-in') Check In
+    a(href='#/info') Info
+  .content
+   != yield
+  footer
+   p.credit
+    | &copy; 2013 The Ridge. All Rights Reserved.
