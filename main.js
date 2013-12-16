@@ -18,6 +18,13 @@ app.config(function($routeProvider) {
 	});
 });
 
+$(document).ready(function() {
+	$('.page a').on('click', function(event){
+		event.preventDefault();
+		window.location = $(this).attr('href');
+	})
+})
+
 function mainCtrl($scope) {
 	
 }
