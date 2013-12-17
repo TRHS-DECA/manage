@@ -23,7 +23,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		window.location = $(this).attr('href');
 	});
-	var refreshStuff = function() {
+	refreshStuff = function() {
 		$('.varItem').val('');
 	};
 })
