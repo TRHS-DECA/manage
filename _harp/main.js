@@ -22,7 +22,10 @@ $(document).ready(function() {
 	$('.page a').click(function(event){
 		event.preventDefault();
 		window.location = $(this).attr('href');
-	})
+	});
+	var refreshStuff = function() {
+		$('.varItem').val('');
+	};
 })
 
 function mainCtrl($scope) {
