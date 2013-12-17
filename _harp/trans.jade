@@ -6,4 +6,4 @@
   input(type='text', placeholder='Quantity', name='entry.1800629278')
   input(type='text', placeholder='Total Price', name='entry.651140209')
   input(type='submit', value='Submit')
-iframe(name="hidden_iframe", id="hidden_iframe", style="display:none;", onload="if(transSub) {alert('Transaction Recorded!');}")
+iframe(name="hidden_iframe", id="hidden_iframe", style="display:none;", onload="if(transSub) {alert('Transaction Recorded!'); transSub=false;}")
