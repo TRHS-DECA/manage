@@ -19,7 +19,7 @@ app.config(function($routeProvider) {
 });
 
 $(document).ready(function() {
-	$('.page a').on('click', function(event){
+	$('.page a').click(function(event){
 		event.preventDefault();
 		window.location = $(this).attr('href');
 	})
