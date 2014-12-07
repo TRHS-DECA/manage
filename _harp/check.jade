@@ -1,8 +1,12 @@
 #checkIn.page
 	h2 Check-In
 	form(method='POST', action='https://docs.google.com/forms/d/1hbibHbL-AOwl8KILoAo-Z7pr7vQl2sC8r0NMEOVvBFg/formResponse', target='hidden_iframe', onsubmit='checkSub=true;')
-		input(type='text', placeholder='Manager', name='entry_1175348235')
-//		input(type='text', placeholder='Employee Student ID', name='entry.128268371')
-//		input(type='text', placeholder='Employee Student ID', name='entry.919481212')
+		select(type='text', placeholder='Manager', name='entry_1175348235')
+			option(value='Joe boi') Joe boi
+			option(value='Frankie') Frankie
+			option(value='lolol') lolol
+			option(value='Jamis') Jamis
+			input(type='text', placeholder='Employee Student ID', name='entry.1545299063')
+			input(type='text', placeholder='Employee Student ID', name='entry.355499320')
 		input(type='submit', value='Submit')
 frame(name="hidden_iframe", id="hidden_iframe", style="display:none;", onload="if(checkSub){alert('Checked In!'); checkSub=false; window.location.hash = '#/transactions'}")

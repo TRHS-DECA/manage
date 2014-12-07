@@ -1,9 +1,32 @@
-#transactions.page
+transactions.page
  h2 Transaction Tracker
  form(method='POST', action='https://docs.google.com/forms/d/1M8ABGQkAy9EQnUfqPBX0mPwdTQs8stzJKZQWjCYDrcc/formResponse', target='hidden_iframe', onsubmit='transSub = true;')
   input(type='text', placeholder='Manager Name', name='entry.324845999')
-  input.varItem(type='text', placeholder='Item Name', name='entry.243460712')
-  input.varItem(type='text', placeholder='Quantity', name='entry.1800629278')
-  input.varItem(type='text', placeholder='Total Price', name='entry.651140209')
+	select(type='text', placeholder='Shirts Sold  ', name='entry.982390836')
+		option(value="")
+		option(value='Dry-fit Long-sleeve') Dry-fit Long-sleeve
+		option(value='Blackout/Whiteout T-Shirts') Blackout/Whiteout T-Shirts
+		option(value='Long Sleeve') Long Sleeve
+		option(value='T-Shirts') T-Shirts
+		option(value='Polo shirt') Polo shirt
+		option(value='Youth Shirt') Youth Shirt
+	select(type='text', placeholder='Sweatshirts/Pants Sold  ', name='entry.1287104398')
+		option(value="")
+		option(value='Navy Quarter-zip') Navy Quarter-zip
+		option(value='Performance Sweatshirt') Performance Sweatshirt
+		option(value='Cotton Sweatshirt') Cotton Sweatshirt
+		option(value='Crewneck Sweatshirt') Crewneck Sweatshirt
+		option(value='Sweatpants') Sweatpants
+	select(type='text', placeholder='Accessories Sold  ', name='entry.155617066')
+		option(value="")
+		option(value='Hat') Hat
+		option(value='Blanket') Blanket
+		option(value='Scarf') Scarf
+		option(value='Belt Buckle') Belt Buckle
+		option(value='License Plate Holder') License Plate Holder
+		option(value='Sandals') Sandals
+		option(value='Lanyard') Lanyard
+		option(value='Bumper Sticker') Bumper Sticker
+	input.varItem(type='text', placeholder='Total Price', name='entry.651140209')
   input(type='submit', value='Submit')
 iframe(name="hidden_iframe", id="hidden_iframe", style="display:none;", onload="if(transSub) {alert('Transaction Recorded!'); transSub=false; refreshStuff();}")
