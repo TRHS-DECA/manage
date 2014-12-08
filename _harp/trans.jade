@@ -1,9 +1,49 @@
 #transactions.page
- h2 Transaction Tracker
- form(method='POST', action='https://docs.google.com/forms/d/1M8ABGQkAy9EQnUfqPBX0mPwdTQs8stzJKZQWjCYDrcc/formResponse', target='hidden_iframe', onsubmit='transSub = true;')
-  input(type='text', placeholder='Manager Name', name='entry.324845999')
-  input.varItem(type='text', placeholder='Item Name', name='entry.243460712')
-  input.varItem(type='text', placeholder='Quantity', name='entry.1800629278')
-  input.varItem(type='text', placeholder='Total Price', name='entry.651140209')
-  input(type='submit', value='Submit')
+	h2 Transaction Tracker
+	form(method='POST', action='https://docs.google.com/forms/d/1hbibHbL-AOwl8KILoAo-Z7pr7vQl2sC8r0NMEOVvBFg/formResponse', target='hidden_iframe', onsubmit='transSub = true;')
+		h4 Select a Manager
+		select.placement(type='text', placeholder='Manager Name', name='entry.1175348235')
+			option(value="")
+			option(value='Chelsea Sasaoka') Chelsea Sasaoka
+			option(value='Austin Burr') Austin Burr
+			option(value='Matthew Pochocki') Matthew Pochocki
+			option(value='Lauren Murken') Lauren Murken
+			option(value='Rachel Davis') Rachel Davis
+			option(value='Zoe Jardenico') Zoe Jardenico
+			option(value='Sydney Hafer') Sydney Hafer
+			option(value='Chris Wood') Chris Wood
+			option(value='Cori Cominsky') Cori Cominsky
+			option(value='Morgan McIver') Morgan McIver
+			option(value='Marissa Hodges') Marissa Hodges
+		h4 Shirts Sold
+		select.placement(type='text', placeholder='Shirts Sold  ', name='entry.982390836')
+			option(value="")
+			option(value='Dry-fit Long-sleeve') Dry-fit Long-sleeve
+			option(value='Blackout/Whiteout T-Shirts') Blackout/Whiteout T-Shirts
+			option(value='Long Sleeve') Long Sleeve
+			option(value='T-Shirts') T-Shirts
+			option(value='Polo shirt') Polo shirt
+			option(value='Youth Shirt') Youth Shirt
+		h4 Sweatshirts/Pants Sold
+		select.placement(type='text', placeholder='Sweatshirts/Pants Sold  ', name='entry.1287104398')
+			option(value="")
+			option(value='Navy Quarter-zip') Navy Quarter-zip
+			option(value='Performance Sweatshirt') Performance Sweatshirt
+			option(value='Cotton Sweatshirt') Cotton Sweatshirt
+			option(value='Crewneck Sweatshirt') Crewneck Sweatshirt
+			option(value='Sweatpants') Sweatpants
+		h4.fix Accessories Sold
+		select.placement.last(type='text', placeholder='Accessories Sold  ', name='entry.155617066')
+			option(value="")
+			option(value='Hat') Hat
+			option(value='Blanket') Blanket
+			option(value='Scarf') Scarf
+			option(value='Belt Buckle') Belt Buckle
+			option(value='License Plate Holder') License Plate Holder
+			option(value='Sandals') Sandals
+			option(value='Lanyard') Lanyard
+			option(value='Bumper Sticker') Bumper Sticker
+		h4.put Total Price
+		input.varItem(type='text', placeholder='Total Price', name='entry.1650753030')
+		input(type='submit', value='Submit')
 iframe(name="hidden_iframe", id="hidden_iframe", style="display:none;", onload="if(transSub) {alert('Transaction Recorded!'); transSub=false; refreshStuff();}")
