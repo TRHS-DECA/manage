@@ -2,21 +2,18 @@
 	h2 Check-In
 	form(method='POST', action='https://docs.google.com/forms/d/1wFGUtb8zNZzWorOxRDn875zsE9fDtHfScddX_9Mcxt0/formResponse', target='hidden_iframe', onsubmit='checkSub=true;')
 		h4.manCheck Manager Name
-		select(type='text', placeholder='Manager', name='entry.259169961')
+		select(type='text', placeholder='Manager', name='entry.259169961', ng-disabled="unlisted", class="managerDropdown")
 			option(value="")
-			option(value='Chelsea Sasaoka') Chelsea Sasaoka
-			option(value='Austin Burr') Austin Burr
-			option(value='Matthew Pochocki') Matthew Pochocki
-			option(value='Lauren Murken') Lauren Murken
-			option(value='Rachel Davis') Rachel Davis
-			option(value='Zoe Jardenico') Zoe Jardenico
-			option(value='Sydney Hafer') Sydney Hafer
-			option(value='Chris Wood') Chris Wood
-			option(value='Cori Cominsky') Cori Cominsky
-			option(value='Morgan McIver') Morgan McIver
-			option(value='Marissa Hodges') Marissa Hodges
-			option(value='Brayleigh Young') Brayleigh Young
-
+			option(value="Karli M") Karli M
+			option(value="Marissa W") Marissa W
+			option(value="Trevor J") Trevor J
+			option(value="Haley R") Haley R
+			option(value="Caitlin W. / Mason P") Caitlin W. / Mason P
+			option(value="Livy P") Livy P
+			option(value="Sydney D") Sydney D
+			option(value="Cam E") Cam E
+			option(value="Lauren & Rachel") Lauren & Rachel
+		input(type="text", placeholder="Manager (ONLY IF YOU DIDNT USE THE DROPDOWN)", ng-model="unlistedVal", class="unlisted", name="entry.259169961", ng-change="unlistedPop" ng-disabled="listed")
 		input(type='text', placeholder='Employee Name and Student ID', name='entry.128268371')
 		input(type='text', placeholder='Employee Name and Student ID', name='entry.919481212')
 		input(type='submit', value='Submit')
